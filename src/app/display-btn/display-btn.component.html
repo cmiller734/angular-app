@@ -1,0 +1,6 @@
+<h5>Display Button</h5>
+<hr>
+<button (click)="onDisplay()">{{btnLabel}}</button>
+<p *ngIf="isDisplayed; else ">{{btnText}}</p>
+<div *ngFor="let logItem of log; let i = index" [ngClass]="{whiteText: i >= 4}" [ngStyle]="{backgroundColor: getBkgColor()}">{{logItem}}</div>
+<button (click)="resetNumClicks()">Reset # Clicks</button>
